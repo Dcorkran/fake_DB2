@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs')
 
 /* GET users listing. */
 router.post('/signup', function(req, res, next) {
-  if (!req.body.email || !req.body.password) {
+  if (!req.body.email || !req.body.password || !req.body.f_name) {
     res.status(500).json({"error":"enter an email and password n shit"})
   } else {
     console.log(req.body);
